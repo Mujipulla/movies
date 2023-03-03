@@ -54,18 +54,31 @@
     </div>
 
 
-     <div class="container mt-5">
+    <div class="container mt-5">
         <div class="row">
-          {# {% for  %} #}
+            <h2>Catégories</h2>
+            {% for category in categories  %}
+                <div class="col-md-4">
+                    <h2>{{  category.name }}</h2>
+                    <img class="img-fluid" src="{{ asset('uploads/' ~ category.illustration) }}" alt="{{  category.name }}">
+                    <p>{{  category.description | raw}}</p>
+                    <p><a class="btn btn-secondary" href="{{ path('home', { 'category': category.name }) }}" role="button">View details »</a></p>
+                </div>
+            {% endfor  %}   
+        </div>
 
-         
-            <div class="col-lg-4">
-                <img class="rounded-circle" src="https://ts5.tarafdari.com/contents/user453637/content-image/150c33ff-6b31-4bb2-b346-1bcf46f13bc1.jpeg" alt="Generic placeholder image" width="140" height="140">
-                <h2>Horror</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-          {# {% endfor  %}    #}
+        <hr>
+
+        <div class="row">
+            <h2>Films</h2>
+            {% for products in products  %}
+                <div class="col-md-4">
+                    <img class="img-fluid" src="{{ asset('uploads/' ~ products.illustration) }}" alt="">
+                    <h2>{{  products.name }}</h2>
+                    <p>{{  products.subtitle | raw }}</p>
+                    <p></p>
+                </div>
+            {% endfor  %}   
         </div>
     </div>
                         

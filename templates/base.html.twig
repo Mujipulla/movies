@@ -24,12 +24,12 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-dark bg-primary fixed-top">
-            <div class="container">
+            <div class="container ">
                 <a class="navbar-brand w3-text-white" href="{{ path('home') }}">Online Movies</a>
                 <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse col-md-5" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link w3-text-white" href="{{ path('products') }}">Movies Store</a>
@@ -44,7 +44,7 @@
                     </ul>
                 </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse col-md-3" id="navbarSupportedContent">
                     {# Si l'utilisateur n'a pas le rôle admin et qu'il a le rôle user #}
                     {% if not is_granted("ROLE_ADMIN") and is_granted("ROLE_USER") %}
                         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -90,10 +90,8 @@
                         </ul>
                     {% endif %}
                 </div>
-                 
-                <a href="{{ path('cart') }}" class="w3-text-white w3-right"><i class="fas fa-cart-shopping"></i></a>
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
                     <form class="d-flex w-100 mr-20" method="get" action="{{ path('products') }}">
                         <div class="input-group">
                             <input class="form-control" type="search" name="categoryName" placeholder="Rechercher par catégorie" aria-label="Search">
@@ -104,10 +102,13 @@
                             <input class="form-control" type="search" name="productName" placeholder="Rechercher par nom de film" aria-label="Search">
                         </div>
                     </form>
+                     <a href="{{ path('cart') }}" class="w3-text-white w3-right"><i class="fas fa-cart-shopping"></i></a>
                 </div>
+               
                 
-            </div>
+            </div>            
         </nav>
+
 
         <main role="main" class="mb-xxl-5 pt-5">
             {# si le block carousel est défini #}
