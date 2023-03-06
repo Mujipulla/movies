@@ -15,6 +15,7 @@
                     crossorigin="anonymous" referrerpolicy="no-referrer" />
             {{ encore_entry_link_tags('fontawesome') }}
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" integrity="sha512-Ef5r/bdKQ7JAmVBbTgivSgg3RM+SLRjwU0cAgySwTSv4+jYcVeDukMp+9lZGWT78T4vCUxgT3g+E8t7uabwRuw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+           
         {% endblock %}
 
         {% block javascripts %}
@@ -24,12 +25,12 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-dark bg-primary fixed-top">
-            <div class="container ">
+            <div class="container">
                 <a class="navbar-brand w3-text-white" href="{{ path('home') }}">Online Movies</a>
                 <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse col-md-5" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse col-md-5" id="navbarSupportedContent" style="ustify-content: space-between;">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link w3-text-white" href="{{ path('products') }}">Movies Store</a>
@@ -38,7 +39,7 @@
                             <a class="nav-link w3-text-white" href="#">Qui sommes-nous ?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link w3-text-white" href="#"><i class="fa-solid fa-headphones"></i> Assistance</a>
+                            <a class="nav-link w3-text-white" href="{{ path('app_assistance') }}"><i class="fa-solid fa-headphones"></i> Assistance</a>
                         </li>
 
                     </ul>
@@ -91,7 +92,7 @@
                     {% endif %}
                 </div>
 
-                <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse col-md-3" id="navbarSupportedContent">
                     <form class="d-flex w-100 mr-20" method="get" action="{{ path('products') }}">
                         <div class="input-group">
                             <input class="form-control" type="search" name="categoryName" placeholder="Rechercher par catégorie" aria-label="Search">
@@ -167,9 +168,35 @@
                 {% block body %}{% endblock %}
             </div>          
 
-            <footer class="container w3-padding mt-5">
+            {# <footer class="container w3-padding mt-5">
                 <p class="w3-right"><a href="#">Back to top</a></p>
                 <p>© 2022-2022 Boutique Poles. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </footer> #}
+
+            <footer class="text-center text-white" style="background-color: rgb(211, 211, 211);">
+                
+                <div class="d-flex justify-content-center">
+                    <div class="">
+                        <iframe width="400" height="220" 
+                            src="https://www.youtube.com/embed/51IT8bGMGiQ" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                        <iframe width="400" height="220" 
+                            src="https://www.youtube-nocookie.com/embed/2-gvBfFKf20" 
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                    
+        
+                
+
+                
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2023 Copyright:
+                    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
             </footer>
         </main>
                  <!-- JQuery -->

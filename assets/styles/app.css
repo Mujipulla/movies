@@ -40,6 +40,7 @@ fieldset legend {
     font-weight: bold;
 }
 
+
 .btn-group .fa-circle-minus,
 .btn-group .fa-plus-circle {
     color: #333333;
@@ -50,4 +51,5 @@ fieldset legend {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: inline-flex;
 }
