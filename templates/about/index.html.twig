@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutController!{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1>Nous sommes</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('img/Qui.jpg') }}" class="img-fluid" alt="About Us Image">
+            </div>
+            <div class="col-md-6">
+            
+                <p>Dans notre entreprise, nous nous engageons à offrir la meilleure expérience de cinéma en ligne possible à nos clients. Notre objectif est d'apporter l'expérience du cinéma chez vous, avec une large sélection de films et de vidéos YouTube disponibles en streaming.</p>
+                <p>Nos services incluent :</p>
+                <ul>
+                    <li>Diffusion illimitée de films et de vidéos YouTube</li>
+                    <li>Accès à du contenu exclusif et à une programmation originale</li>
+                    <li>Expérience de visionnage sans publicité</li>
+                    <li>Diffusion vidéo et audio de haute qualité</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
